@@ -5,10 +5,10 @@ public class WhiteTriangle implements Triangle {
 	private int A;
 	private int B;
 	private int C;
-public	WhiteTriangle (int a, int b, int c) {
-	A = a;
-	B = b;
-	C = c;
+public	WhiteTriangle () {
+	A = 1 + (int)Math.random()*100;
+	B = 1 + (int)Math.random()*100;
+	C = 1 + (int)Math.random()*100;
 }
 public boolean ifTriangle() {
 	if( (A+B)>C && (A+C)>B && (B+C)>A) {

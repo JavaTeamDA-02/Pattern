@@ -5,4 +5,5 @@ public interface Circle {
     public String getColor();
     public double getRadius();
     public double getArea();
+    public double getPerimeter();
 }

@@ -9,41 +9,39 @@ public class Application {
         af = new AbstractFactory();
         BaseFactory bf = af.getFactoryBlack();
         Circle first = bf.createCircle();
-        System.out.println(first.getColor()); //інші всі так зробить
-        System.out.println(first.getID());
-        System.out.println(first.getArea());
-        System.out.println(first.getPerimeter());
-        System.out.println(first.getRadius());
+        System.out.println("Колір: "+ first.getColor());
+        System.out.println("ID: "+first.getID());
+        System.out.println("Площа: "+first.getArea());
+        System.out.println("Периметр: "+first.getPerimeter());
+        System.out.println("Радіус: "+first.getRadius());
         }
     public void newWhiteCircle(){
         af = new AbstractFactory();
         BaseFactory bf = af.getFactoryWhite();
         Circle first = bf.createCircle();
-        System.out.println(first.getColor());
-        System.out.println(first.getID());
-        System.out.println(first.getArea());
-        System.out.println(first.getPerimeter());
-        System.out.println(first.getRadius());
+        System.out.println ("Колір: " +first.getColor());
+        System.out.println("ID: " + first.getID());
+        System.out.println("Площа: "+first.getArea());
+        System.out.println("Периметр: "+first.getPerimeter());
+        System.out.println("Радіус: "+first.getRadius());
     }
     public void newBlackTriangle(){
         af = new AbstractFactory();
         BaseFactory bf = af.getFactoryBlack();
         Triangle first = bf.createTriangle();
-        System.out.println(first.getColor());
-        System.out.println( first.ifTriangle());
-        System.out.println(first.getColor());
-        System.out.println(first.getPerimetr());
-        System.out.println(first.getSquare());
+        System.out.println("Колір: " + first.getColor());
+        System.out.println("Чи трикутник: " +first.ifTriangle());
+        System.out.println("Периметр: " +first.getPerimetr());
+        System.out.println("Площа: " +first.getSquare());
     }
     public void newWhiteTriangle(){
         af = new AbstractFactory();
         BaseFactory bf = af.getFactoryWhite();
         Triangle first = bf.createTriangle();
-        System.out.println(first.getColor());
-        System.out.println(first.ifTriangle());
-        System.out.println(first.getColor());
-        System.out.println(first.getPerimetr());
-        System.out.println(first.getSquare());
+        System.out.println("Площа: " + first.getColor());
+        System.out.println("Чи трикутник: " +first.ifTriangle());
+        System.out.println("Периметр: " +first.getPerimetr());
+        System.out.println("Площа: " +first.getSquare());
     }
     public static void main(String [] arg){
         Application ap = new Application();
@@ -59,32 +57,31 @@ public class Application {
             System.out.println ("1) Білий");
             System.out.println ("2) Чорний");
             Scanner scan3 = new Scanner(System.in);
-            int number2 = scan.nextInt();
+            int number2 = scan3.nextInt();
 
             if (number2 == 1){
-                ap.newWhiteCircle();
+                ap.newWhiteTriangle();
             }
-            if (number2 == 3){
-                ap.newBlackCircle();
+            if (number2 == 2){
+                ap.newBlackTriangle();
             }
         }
 
         if (number == 2){
             System.out.println ("Оберіть колір:");
-            System.out.println ("1) Білий");
-            System.out.println ("2) Чорний");
+            System.out.println ("1) Біле");
+            System.out.println ("2) Чорне");
             Scanner scan3 = new Scanner(System.in);
 
-            int number2 = scan.nextInt();
+            int number2 = scan3.nextInt();
 
             if (number2 == 1){
-                ap.newWhiteTriangle();
+                ap.newWhiteCircle();
             }
-            if (number2 == 3){
-                ap.newBlackTriangle();
+            if (number2 == 2){
+                ap.newBlackCircle();
             }
         }
-
     }
 }
 

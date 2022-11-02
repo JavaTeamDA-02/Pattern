@@ -16,4 +16,7 @@ public class WhiteFactory implements BaseFactory{
     public Triangle createTriangle() {
         return new WhiteTriangle();
     }
+    public Triangle createTriangle(double a, double b, double c) {
+        return new WhiteTriangle(a, b, c);
+    }
 }
